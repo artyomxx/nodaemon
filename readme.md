@@ -52,7 +52,7 @@ nodaemon start \
   /tmp/nodaemon-my-fancy-service.log
 ```
 
-The same, but using `npm start`:
+The same, but using `npm run daemon`:
 ```sh
 nodaemon start ./my-fancy-service --npm
 ```
