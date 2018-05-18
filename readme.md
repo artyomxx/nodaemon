@@ -80,7 +80,7 @@ Notice, that in order to stop or restart that messy service you have to provide 
 nodaemon stop the-name-that-does-not-matter -i /tmp/the-pid-of-the-service.pid
 ```
 
-**Hint:** use `--logs` (or `-l`) parameter if you want to specify the logs dir, but leave the log files names to be generated automatically based on the service name.
+**Hint:** use `--logs` (or `-l`) parameter if you want to specify the logs dir but leave the log files' names to be generated automatically based on the service name.
 
 ---
 
