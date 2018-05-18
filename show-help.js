@@ -14,9 +14,9 @@ Options:
   -i --pid     Path to the pid file (default: /tmp/nodaemon-%name%.pid)
   -a --args    Arguments string to pass to the process (default: empty)
   -l --logs    Path to the logs dir (default: /tmp/)
-  --log        Path to the log (default: /tmp/nodaemon-%name%.log)
-  --error-log  Path to the error log (default: the same as --log)
+  --log        Path to the log file (default: /tmp/nodaemon-%name%.log)
+  --error-log  Path to the error log file (default: the same as --log)
   --npm        Use 'npm start' command instead of 'node %path%'.
-               In this case %path% should be a directory with 'package.json'.
-               Also, you have to add '& echo $! > $PIDFILE' to the end of 'npm start' command.
+               In this case %path% should be a directory with 'package.json' file.
+               Also, you have to add '& echo $! > $PIDFILE' into the end of 'npm start' command inside the 'package.json' file.
 `);
