@@ -1,0 +1,6 @@
+logs
+.tmp
+node_modules
+*.log
+test.js
+test
