@@ -75,7 +75,7 @@ nodaemon start \
   --error-log /dev/null
 ```
 
-Notice, that in order to stop or restart that messy service you have to provide the pid path:
+Note that in order to stop or restart that messy service you have to provide the pid path:
 ```sh
 nodaemon stop the-name-that-does-not-matter -i /tmp/the-pid-of-the-service.pid
 ```
