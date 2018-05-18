@@ -31,7 +31,7 @@ const processStart = config => {
 	let command = '';
 
 	if(config.npm)
-		command = `PIDFILE=${config.pid} /usr/bin/env npm start ${config.args} 1>> ${config.stdlog} 2>> ${config.errlog}`;
+		command = `PIDFILE=${config.pid} /usr/bin/env npm run ${config.npm} ${config.args} 1>> ${config.stdlog} 2>> ${config.errlog}`;
 	else
 		command = `/usr/bin/env node ${config.path} ${config.args} 1>> ${config.stdlog} 2>> ${config.errlog} & echo $!`;
 

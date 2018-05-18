@@ -23,7 +23,7 @@ const nodaemon = (config = {}) => {
 		process.exit(console.error('ERROR: you haven\'t provided the path') || 1);
 
 	if(typeof config.npm !== 'boolean')
-		config.npm = args.npm || false;
+		config.npm = (args.npm === true ? 'daemon' : args.npm) || false;
 
 	if(!config.npm) {
 		try {
