@@ -1,6 +1,6 @@
 ## Node Daemon Manager
 
-For using with thigs like Monit, etc. 
+Helps managing Node-based (not only) services with thigs like Monit, etc. 
 
 Install: `npm i -g nodaemon`
 
