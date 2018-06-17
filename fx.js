@@ -4,7 +4,18 @@ const fs = require('fs'),
 	path = require('path'),
 	cp = require('child_process');
 
-const dirname = file => /.*\/([^\/]+)\/?$/g.exec(fs.realpathSync(path.dirname(file)))[1];
+const dirname = file => {
+	try {
+		if(fs.statSync(file).isFile())
+			return /.*\/([^\/]+)\/?$/g.exec(fs.realpathSync(path.dirname(file)))[1];
+		else
+			return path.parse(file).base;
+	}
+	catch(error) {
+		console.error(`Something's wrong with the provided path <${file}>:`, error.message);
+		process.exit(1);
+	}
+};
 
 const readFile = f => fs.existsSync(f) ? fs.readFileSync(f) : null;
 const writeFile = (f, data) => fs.writeFileSync(f, data);
